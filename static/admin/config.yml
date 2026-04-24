@@ -2,7 +2,7 @@ backend:
   name: github
   repo: dltt1991/dltt1991.github.io
   branch: main
-  base_url: https://api.netlify.com
+  base_url: https://blog.dltt1991.workers.dev
   auth_endpoint: auth
 
 media_folder: "static/images/uploads"
