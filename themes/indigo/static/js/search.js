@@ -9,7 +9,7 @@ let searchIndex;
 
 async function loadSearch() {
   if (!searchIndex) {
-    const res = await fetch('/search.json');
+    const res = await fetch('/index.json');
     searchIndex = await res.json();
     const Fuse = (await import('https://cdn.jsdelivr.net/npm/fuse.js@7.0.0/dist/fuse.mjs')).default;
     fuse = new Fuse(searchIndex, {
