@@ -10,7 +10,7 @@ theme = "indigo"
   home = ["HTML", "RSS", "JSON"]
 
 [params]
-  author = "dltt1991"
+  author = "大浪滔天"
   description = "写代码 · 记笔记 · 分享想法"
   giscus_repo = "dltt1991/dltt1991.github.io"
   giscus_repo_id = "R_kgDOSLHbyQ"
