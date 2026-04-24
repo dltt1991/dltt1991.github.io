@@ -2,8 +2,8 @@ backend:
   name: github
   repo: dltt1991/dltt1991.github.io
   branch: main
-  base_url: https://blog.dltt1991.workers.dev
-  auth_endpoint: auth
+  auth_type: pkce
+  app_id: dltt1991
 
 media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
