@@ -1,0 +1,27 @@
+{{ define "main" }}
+{{ partial "hero.html" . }}
+<div class="container">
+  <div class="posts">
+    {{ range .Paginator.Pages }}
+    <article class="card">
+      {{ if .Params.cover }}
+      <div class="card-cover" style="background-image:url({{ .Params.cover }})"></div>
+      {{ else }}
+      <div class="card-cover placeholder"></div>
+      {{ end }}
+      <div class="card-body">
+        <div class="meta">
+          {{ range .Params.tags }}
+          <span class="tag">#{{ . }}</span>
+          {{ end }}
+          <span class="date">{{ .Date.Format "2006-01-02" }}</span>
+        </div>
+        <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
+        <p class="summary">{{ .Summary }}</p>
+      </div>
+    </article>
+    {{ end }}
+  </div>
+  {{ template "_internal/pagination.html" . }}
+</div>
+{{ end }}
