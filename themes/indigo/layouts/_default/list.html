@@ -18,7 +18,7 @@
           <span class="date">{{ .Date.Format "2006-01-02" }}</span>
         </div>
         <h2>{{ .Title }}</h2>
-        <p class="summary">{{ .Summary | truncate 120 }}</p>
+        <p class="summary">{{ .Plain | truncate 200 }}</p>
       </div>
       </a>
     </article>
