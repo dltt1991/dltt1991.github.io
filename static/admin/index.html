@@ -4,59 +4,58 @@
   <meta charset="utf-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>内容管理</title>
-  <script src="https://unpkg.com/decap-cms@^3.3.0/dist/decap-cms.js" type="module"></script>
+  <script>
+    window.CMS_MANUAL_INIT = true;
+  </script>
+  <script src="https://unpkg.com/decap-cms@^3.3.0/dist/decap-cms.js"></script>
 </head>
 <body>
   <script>
-    window.CMS_MANUAL_INIT = true;
-
-    window.addEventListener('DOMContentLoaded', () => {
-      CMS.init({
-        config: {
-          backend: {
-            name: 'github',
-            repo: 'dltt1991/dltt1991.github.io',
-            branch: 'main',
-            auth_type: 'implicit',
-            app_id: 'Ov23licZJDajfQESGJxz'
+    CMS.init({
+      config: {
+        backend: {
+          name: 'github',
+          repo: 'dltt1991/dltt1991.github.io',
+          branch: 'main',
+          auth_type: 'implicit',
+          app_id: 'Ov23licZJDajfQESGJxz'
+        },
+        media_folder: 'static/images/uploads',
+        public_folder: '/images/uploads',
+        locale: 'zh_Hans',
+        collections: [
+          {
+            name: 'posts',
+            label: '文章',
+            folder: 'content/posts',
+            create: true,
+            slug: '{{year}}-{{month}}-{{day}}-{{slug}}',
+            fields: [
+              {label: '标题', name: 'title', widget: 'string'},
+              {label: '发布日期', name: 'date', widget: 'datetime', format: 'YYYY-MM-DD'},
+              {label: '标签', name: 'tags', widget: 'list', default: ['blog']},
+              {label: '封面图', name: 'cover', widget: 'image', required: false},
+              {label: '摘要', name: 'summary', widget: 'text', required: false},
+              {label: '正文', name: 'body', widget: 'markdown'}
+            ]
           },
-          media_folder: 'static/images/uploads',
-          public_folder: '/images/uploads',
-          locale: 'zh_Hans',
-          collections: [
-            {
-              name: 'posts',
-              label: '文章',
-              folder: 'content/posts',
-              create: true,
-              slug: '{{year}}-{{month}}-{{day}}-{{slug}}',
-              fields: [
-                {label: '标题', name: 'title', widget: 'string'},
-                {label: '发布日期', name: 'date', widget: 'datetime', format: 'YYYY-MM-DD'},
-                {label: '标签', name: 'tags', widget: 'list', default: ['blog']},
-                {label: '封面图', name: 'cover', widget: 'image', required: false},
-                {label: '摘要', name: 'summary', widget: 'text', required: false},
-                {label: '正文', name: 'body', widget: 'markdown'}
-              ]
-            },
-            {
-              name: 'pages',
-              label: '页面',
-              files: [
-                {
-                  label: '关于',
-                  name: 'about',
-                  file: 'content/about.md',
-                  fields: [
-                    {label: '标题', name: 'title', widget: 'string'},
-                    {label: '正文', name: 'body', widget: 'markdown'}
-                  ]
-                }
-              ]
-            }
-          ]
-        }
-      });
+          {
+            name: 'pages',
+            label: '页面',
+            files: [
+              {
+                label: '关于',
+                name: 'about',
+                file: 'content/about.md',
+                fields: [
+                  {label: '标题', name: 'title', widget: 'string'},
+                  {label: '正文', name: 'body', widget: 'markdown'}
+                ]
+              }
+            ]
+          }
+        ]
+      }
     });
   </script>
 </body>
