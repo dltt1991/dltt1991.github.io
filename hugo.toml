@@ -13,8 +13,8 @@ theme = "indigo"
   author = "dltt1991"
   description = "写代码 · 记笔记 · 分享想法"
   giscus_repo = "dltt1991/dltt1991.github.io"
-  giscus_repo_id = ""
-  giscus_category_id = ""
+  giscus_repo_id = "R_kgDOSLHbyQ"
+  giscus_category_id = "DIC_kwDOSLHbyc4C7llU"
 
 [markup]
   [markup.tableOfContents]
