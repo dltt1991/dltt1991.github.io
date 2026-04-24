@@ -1,2 +1,5 @@
 public/
 .superpowers/
+wrangler.toml
+.wrangler/
+.dev.vars
