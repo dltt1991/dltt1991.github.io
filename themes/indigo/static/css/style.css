@@ -116,8 +116,6 @@ body {
 }
 
 .card {
-  display: grid;
-  grid-template-columns: 200px 1fr;
   background: var(--bg-secondary);
   border: 1px solid var(--border);
   border-radius: 12px;
@@ -140,6 +138,13 @@ body {
 
 .card-cover.placeholder {
   background: linear-gradient(135deg, var(--primary-light) 0%, var(--primary) 100%);
+}
+
+.card-link {
+  display: grid;
+  grid-template-columns: 200px 1fr;
+  text-decoration: none;
+  color: inherit;
 }
 
 .card-body { padding: 20px; }
@@ -177,8 +182,15 @@ body {
 
 /* Single Post */
 .single-layout {
-  max-width: 900px;
+  max-width: 1200px;
   margin: 48px auto;
+  padding: 0 20px;
+}
+
+.single-grid {
+  display: grid;
+  grid-template-columns: 220px 1fr;
+  gap: 48px;
 }
 
 .post-header {
@@ -195,12 +207,6 @@ body {
 .read-time {
   color: var(--text-secondary);
   font-size: 14px;
-}
-
-.post-body {
-  display: grid;
-  grid-template-columns: 1fr 240px;
-  gap: 48px;
 }
 
 .post-content {
@@ -401,9 +407,9 @@ body {
 
 /* Responsive */
 @media (max-width: 768px) {
-  .post-body { grid-template-columns: 1fr; }
+  .single-grid { grid-template-columns: 1fr; }
   .toc { display: none; }
-  .posts { grid-template-columns: 1fr; }
+  .card-link { grid-template-columns: 1fr; }
   .card { grid-template-columns: 1fr; }
   .card-cover { min-height: 160px; }
 }

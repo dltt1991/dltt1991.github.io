@@ -4,6 +4,7 @@
   <div class="posts">
     {{ range .Paginator.Pages }}
     <article class="card">
+      <a href="{{ .RelPermalink }}" class="card-link">
       {{ if .Params.cover }}
       <div class="card-cover" style="background-image:url({{ .Params.cover }})"></div>
       {{ else }}
@@ -16,9 +17,10 @@
           {{ end }}
           <span class="date">{{ .Date.Format "2006-01-02" }}</span>
         </div>
-        <h2><a href="{{ .RelPermalink }}">{{ .Title }}</a></h2>
-        <p class="summary">{{ .Summary }}</p>
+        <h2>{{ .Title }}</h2>
+        <p class="summary">{{ .Summary | truncate 120 }}</p>
       </div>
+      </a>
     </article>
     {{ end }}
   </div>

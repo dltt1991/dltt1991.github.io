@@ -1,20 +1,20 @@
 {{ define "main" }}
-<div class="container single-layout">
-  <article class="post">
-    <header class="post-header">
-      <div class="meta">
-        {{ range .Params.tags }}<span class="tag">#{{ . }}</span>{{ end }}
-        <span class="date">{{ .Date.Format "2006-01-02" }}</span>
-        <span class="read-time">{{ math.Round (div (countwords .Content) 200.0) }} min read</span>
-      </div>
-      <h1>{{ .Title }}</h1>
-    </header>
-    <div class="post-body">
+<div class="single-layout">
+  <div class="single-grid">
+    {{ partial "toc.html" . }}
+    <article class="post">
+      <header class="post-header">
+        <div class="meta">
+          {{ range .Params.tags }}<span class="tag">#{{ . }}</span>{{ end }}
+          <span class="date">{{ .Date.Format "2006-01-02" }}</span>
+          <span class="read-time">{{ math.Round (div (countwords .Content) 200.0) }} min read</span>
+        </div>
+        <h1>{{ .Title }}</h1>
+      </header>
       <div class="post-content">{{ .Content }}</div>
-      {{ partial "toc.html" . }}
-    </div>
-  </article>
-  {{ partial "comments.html" . }}
+      {{ partial "comments.html" . }}
+    </article>
+  </div>
 </div>
 <script src="/js/toc.js"></script>
 {{ end }}
