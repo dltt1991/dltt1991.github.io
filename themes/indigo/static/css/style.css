@@ -109,13 +109,15 @@ body {
 
 /* Posts Grid */
 .posts {
-  display: grid;
-  grid-template-columns: repeat(3, 1fr);
-  gap: 24px;
+  display: flex;
+  flex-direction: column;
+  gap: 16px;
   margin: 48px 0;
 }
 
 .card {
+  display: grid;
+  grid-template-columns: 200px 1fr;
   background: var(--bg-secondary);
   border: 1px solid var(--border);
   border-radius: 12px;
@@ -129,7 +131,8 @@ body {
 }
 
 .card-cover {
-  height: 160px;
+  height: 100%;
+  min-height: 140px;
   background: var(--primary-light);
   background-size: cover;
   background-position: center;
@@ -401,4 +404,6 @@ body {
   .post-body { grid-template-columns: 1fr; }
   .toc { display: none; }
   .posts { grid-template-columns: 1fr; }
+  .card { grid-template-columns: 1fr; }
+  .card-cover { min-height: 160px; }
 }
