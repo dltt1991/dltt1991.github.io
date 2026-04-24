@@ -1,5 +1,5 @@
 ---
-title: "关于"
+title: 关于
 ---
 
 Hi，我是 dltt1991。
@@ -8,8 +8,8 @@ Hi，我是 dltt1991。
 
 ## 联系方式
 
-- GitHub: [@dltt1991](https://github.com/dltt1991)
+- dltt1991@163.com
 
 ## 技术栈
 
-本站使用 Hugo + 自定义主题构建，部署在 GitHub Pages。
+本站使用 Hugo + 自定义主题构建，部署在 Cloudflare Pages。
