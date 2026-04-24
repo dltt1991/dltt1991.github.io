@@ -3,7 +3,7 @@ backend:
   repo: dltt1991/dltt1991.github.io
   branch: main
   auth_type: pkce
-  app_id: dltt1991
+  app_id: Ov23licZJDajfQESGJxz
 
 media_folder: "static/images/uploads"
 public_folder: "/images/uploads"
