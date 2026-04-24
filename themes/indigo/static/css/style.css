@@ -222,6 +222,59 @@ body {
   margin-bottom: 16px;
 }
 
+.post-content strong { font-weight: 700; }
+
+.post-content table {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 16px;
+}
+
+.post-content th,
+.post-content td {
+  border: 1px solid var(--border);
+  padding: 10px 14px;
+  text-align: left;
+}
+
+.post-content th {
+  background: var(--bg-secondary);
+  font-weight: 700;
+}
+
+.post-content tr:hover { background: var(--bg-secondary); }
+
+.post-content ul,
+.post-content ol {
+  padding-left: 24px;
+  margin-bottom: 16px;
+}
+
+.post-content li { margin-bottom: 4px; }
+
+.post-content blockquote {
+  border-left: 4px solid var(--primary);
+  padding: 8px 16px;
+  margin: 0 0 16px;
+  color: var(--text-secondary);
+  background: var(--bg-secondary);
+  border-radius: 0 8px 8px 0;
+}
+
+.post-content a { color: var(--primary); }
+
+.post-content img {
+  max-width: 100%;
+  border-radius: 8px;
+  margin-bottom: 16px;
+}
+
+.post-content hr {
+  border: none;
+  border-top: 1px solid var(--border);
+  margin: 32px 0;
+}
+
 /* TOC */
 .toc {
   position: sticky;
